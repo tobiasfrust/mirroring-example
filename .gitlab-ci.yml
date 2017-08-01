@@ -4,10 +4,10 @@ stages:
 
 mirror:
   stage: mirroring
-  image: alpine:latest
+  image: debian:latest
   before_script:
-    - apk update && apk upgrade
-    - apk add bash git openssh
+    - apt-get update -qy
+    - apt-get install -qy git-core openssh-client
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
