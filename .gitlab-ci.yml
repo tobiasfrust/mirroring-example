@@ -25,3 +25,5 @@ test-1:
   script:
     - echo "Run Tests"
     - exit 0
+  only:
+    - schedules
