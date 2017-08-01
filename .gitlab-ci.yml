@@ -14,7 +14,7 @@ mirror:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     - git clone --mirror git@github.com:tobiasfrust/mirroring-example.git
-    - cd mirroring-example
+    - cd mirroring-example.git
     - git push --mirror git@gitlab.hzdr.de:examples/project-mirroring.git
   only:
     - schedules
