@@ -16,8 +16,8 @@ mirror:
     - git clone --mirror git@github.com:tobiasfrust/mirroring-example.git
     - cd mirroring-example.git
     - git push --mirror git@gitlab.hzdr.de:examples/project-mirroring.git
-  only:
-    - schedules
+#  only:
+#    - schedules
 
 test-1:
   stage: test
@@ -25,5 +25,5 @@ test-1:
   script:
     - echo "Run Tests"
     - exit 0
-  only:
-    - schedules
+#  only:
+#    - schedules
