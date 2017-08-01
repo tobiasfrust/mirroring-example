@@ -27,3 +27,4 @@ git push --mirror git@gitlab.example.com:<user>/<repository>
 
 Also have a look here https://docs.gitlab.com/ce/ci/ssh_keys/README.html for information
 about how to use SSH keys in GitLab-CI.
+
