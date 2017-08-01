@@ -5,6 +5,8 @@ stages:
 mirror:
   stage: mirroring
   image: debian:latest
+  variables:
+    GIT_STRATEGY: none
   before_script:
     - apt-get update -qy
     - apt-get install -qy git-core openssh-client
@@ -22,6 +24,10 @@ mirror:
 test-1:
   stage: test
   image: alpine:latest
+  variables:
+    # deactivate checkout, otherwise the tests won't run on the latest commit
+    GIT_STRATEGY: clone
+    GIT_CHECKOUT: "false"
   script:
     - echo "Run Tests"
     - exit 0
